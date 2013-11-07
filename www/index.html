@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Learn 30 technologies in 30 days</title>
+  
+  <link rel="stylesheet" href="css/vendor/jquery.mobile-1.3.1.min.css"> 
+  <link rel="stylesheet" href="css/vendor/jquery.loadmask.css">
+
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="mainPage">
+        <div data-role="header" data-position="fixed">
+            
+            <h1>30Technologies30Days</h1>
+            <a href="#feeback" data-icon="edit" data-theme="b" class="feedback ui-btn-right" data-role="button" data-inline="true" data-ajax="false">Feedback</a>
+            
+            <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="home ui-btn-active" data-icon="home">Home</a></li>
+                
+            </ul>
+        </div>
+        </div>
+
+
+        <div id="main" data-role="content">
+            
+        </div>
+        
+        <div data-theme="a" data-role="footer">
+        <h3>
+            © Shekhar Gulati 2013
+        </h3>
+    </div>
+</div>
+
+<script type="text/x-mustache-template" id="home-template">
+  <ul id="blogs" data-role="listview" data-filter="true" data-filter-placeholder="Search blogs..." data-inset="true">
+
+  </ul>
+</script>
+
+<script type="text/x-mustache-template" id="blog-template">
+<li>
+    <a href="{{url}}" target="_blank">
+        <h3>{{title}}</h3>
+        <p><strong>{{publishedOn}}</strong></p>
+    </li>
+</script>
+
+<script type="text/x-mustache-template" id="feedback-form-template">
+    
+    <form action="" id="feedbackForm">
+            <div data-role="fieldcontain">
+                <label for="name">
+                    Describe
+                </label>
+                <input type="text" name="name" id="name" placeholder="Full Name eg. Shekhar Gulati ">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="description">
+                    Describe
+                </label>
+                <textarea name="description" id="description" placeholder="Message for author.."></textarea>
+            </div>
+            <div id="checkboxes1" data-role="fieldcontain">
+
+                <fieldset data-role="controlgroup" data-type="vertical">
+                    <legend>
+                        Share my location
+                    </legend>
+                    <input id="sharemylocation" name="sharemylocation" type="checkbox" value="true">
+                    <label for="sharemylocation">
+                        Share
+                    </label>
+                </fieldset>
+            </div>
+            <button id="create-button" data-inline="true">Feedback</button>
+        </form>
+</script>
+
+
+<script src="phonegap.js"></script>
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/jquery.mobile-1.3.1.min.js"></script>
+<script src="js/vendor/jquery.ui.map.js"></script>
+<script src="js/vendor/jquery.loadmask.min.js"></script>
+<script src="js/vendor/jquery.timeago.js"></script>
+<script type="text/javascript" src="js/vendor/mustache.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
